@@ -1,0 +1,16 @@
+string,lv1,lv2,dict_action,domain_tag
+1\d{3}年,general_term,date,merge,regex
+一[〇零○一二三四五六七八九]{3}年,general_term,date,merge,regex
+"一千[〇零○一二三四五六七八九]百[〇零○一二三四五六七八九十廿卅]{1,3}年",general_term,date,merge,regex
+"(?:崇德|順治|康熙|雍正|乾隆|嘉慶|道光|咸豐|同治|光緒|宣統|民國|明治|大正|昭和)(?:初|元|[〇零○一二三四五六七八九十廿卅]{1,3})年",general_term,date,merge,regex
+"第[〇零○一二三四五六七八九十廿卅]{1,5}章",general_term,document,merge,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}條",general_term,document,merge,regex
+"第[〇零○一二三四五六七八九十廿卅]{1,3}項",general_term,document,merge,regex
+第[〇零○一二三四五六七八九十]{1}款,general_term,document,merge,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}屆",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}届",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}次",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}期",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}號",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}部",general_term,document,merge_optional,regex
+"第[〇零○一二三四五六七八九十百千廿卅]{1,5}回",general_term,document,merge_optional,regex

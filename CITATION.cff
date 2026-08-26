@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite this repository and the associated article."
+title: "Code and Data for a Computational Text Analysis of Constitutionalism and Constitution-Making in Modern China"
+type: dataset
+authors:
+  - family-names: Bae
+    given-names: Geonjoon
+repository-code: "https://github.com/GeonjoonBae/ModernChinaConstitutionalism"
+url: "https://github.com/GeonjoonBae/ModernChinaConstitutionalism"
+version: 1.0.0
+date-released: 2026-08-26
+keywords:
+  - Shenbao
+  - constitutionalism
+  - constitution-making
+  - computational text analysis
+  - digital history
+  - modern China

@@ -1,0 +1,68 @@
+{
+  "filter_name": "filter_token_pre_zhixian_retained_official_title",
+  "filter_basis": "token_in_retained_context",
+  "action": "exclude_matching_token_rows_only",
+  "rule": "In retained pre-1913 contexts 9499, 10143, and 10904, exclude tokens containing 制憲 because they denote an official title rather than constitution-making. Keep the contexts and all other tokens.",
+  "filter_csv": "shenbao\\shenbao_filters\\token\\filter_token_pre_zhixian_retained_official_title.csv",
+  "generator_script": "shenbao_pre_zhixian_filter_revision.py",
+  "updated_at": "2026-08-17T22:33:59",
+  "row_count": 3,
+  "context_uids": [
+    9499,
+    10143,
+    10904
+  ],
+  "matched_tokens_by_profile": {
+    "regex-only": [
+      {
+        "context_uid": 9499,
+        "token": "制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10143,
+        "token": "曁前制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10904,
+        "token": "制憲",
+        "matched_token_count": 1
+      }
+    ],
+    "strict": [
+      {
+        "context_uid": 9499,
+        "token": "制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10143,
+        "token": "曁前制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10904,
+        "token": "制憲",
+        "matched_token_count": 1
+      }
+    ],
+    "full": [
+      {
+        "context_uid": 9499,
+        "token": "制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10143,
+        "token": "曁前制憲",
+        "matched_token_count": 1
+      },
+      {
+        "context_uid": 10904,
+        "token": "制憲",
+        "matched_token_count": 1
+      }
+    ]
+  }
+}

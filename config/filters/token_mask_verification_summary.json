@@ -1,0 +1,121 @@
+{
+  "core": {
+    "changed_rows": 108,
+    "changed_periods": [
+      "global_all_p000"
+    ],
+    "changed_pairs": [
+      "憲政-制憲",
+      "憲法-制憲",
+      "立憲-制憲"
+    ],
+    "max_absolute_delta": {
+      "direct_strength": 4.919616050000006e-06,
+      "weighted_jaccard": 0.00037719734400004645,
+      "jaccard": 0.001084598698000011,
+      "cosine": 0.00010899459100000009
+    },
+    "p001_changed_rows": 0
+  },
+  "group": {
+    "changed_rows": 108,
+    "changed_periods": [
+      "global_all_p000"
+    ],
+    "changed_pairs": [
+      "憲政-制憲",
+      "憲法-制憲",
+      "立憲-制憲"
+    ],
+    "max_absolute_delta": {
+      "direct_strength": 2.2159663899999973e-06,
+      "weighted_jaccard": 0.0001030757219999956,
+      "jaccard": 0.001067235858999982,
+      "cosine": 0.00011469862599999825
+    },
+    "p001_changed_rows": 0
+  },
+  "network_validity": {
+    "files_checked": 36,
+    "nonpositive_files": []
+  },
+  "counts": [
+    {
+      "period_id": "long_period_manual_p000",
+      "start_date": "1872-08-20",
+      "end_date": "1905-07-11",
+      "article_count": 137,
+      "context_count": 160,
+      "立憲": 52,
+      "憲政": 9,
+      "憲法": 114,
+      "制憲": 0
+    },
+    {
+      "period_id": "long_period_manual_p001",
+      "start_date": "1905-07-12",
+      "end_date": "1913-02-22",
+      "article_count": 7447,
+      "context_count": 10638,
+      "立憲": 6296,
+      "憲政": 7118,
+      "憲法": 3260,
+      "制憲": 0
+    },
+    {
+      "period_id": "long_period_manual_p002",
+      "start_date": "1913-02-23",
+      "end_date": "1923-11-17",
+      "article_count": 7434,
+      "context_count": 11026,
+      "立憲": 908,
+      "憲政": 600,
+      "憲法": 15534,
+      "制憲": 3272
+    },
+    {
+      "period_id": "long_period_manual_p003",
+      "start_date": "1923-11-18",
+      "end_date": "1937-07-25",
+      "article_count": 6117,
+      "context_count": 8728,
+      "立憲": 476,
+      "憲政": 1926,
+      "憲法": 10052,
+      "制憲": 610
+    },
+    {
+      "period_id": "long_period_manual_p004",
+      "start_date": "1937-07-26",
+      "end_date": "1945-11-23",
+      "article_count": 940,
+      "context_count": 1205,
+      "立憲": 108,
+      "憲政": 469,
+      "憲法": 1151,
+      "制憲": 20
+    },
+    {
+      "period_id": "long_period_manual_p005",
+      "start_date": "1945-11-24",
+      "end_date": "1949-05-26",
+      "article_count": 3515,
+      "context_count": 5166,
+      "立憲": 68,
+      "憲政": 2146,
+      "憲法": 5815,
+      "制憲": 1062
+    },
+    {
+      "period_id": "total",
+      "start_date": NaN,
+      "end_date": NaN,
+      "article_count": 25590,
+      "context_count": 36923,
+      "立憲": 7908,
+      "憲政": 12268,
+      "憲法": 35926,
+      "制憲": 4964
+    }
+  ]
+}

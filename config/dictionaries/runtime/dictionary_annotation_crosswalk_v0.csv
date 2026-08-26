@@ -1,0 +1,36 @@
+lv1,lv2,dict_ner_like_type,default_pos,notes
+concept,foreign_politics,,Na,foreign political concept
+concept,institutional_principle,,Na,institutional principle
+concept,policy,,Na,policy concept
+concept,political_event,EVENT,Na,political or historical event
+concept,political_order,,Na,political order or regime concept
+concept,political_process,,Na,process or procedure concept
+concept,value_principle,,Na,value or normative principle
+document,constitution,LAW,Na,constitution text
+document,law,LAW,Na,law or legal text
+document,policy,LAW,Na,policy document
+document,proposal,LAW,Na,proposal or draft text
+document,provision,LAW,Na,article or provision level legal text
+document,rule,LAW,Na,rule or regulation
+document,treatise,WORK_OF_ART,Na,treatise or monograph
+document,treaty,LAW,Na,treaty or convention
+figure,foreign_leader,PERSON,Nb,person entity
+figure,person,PERSON,Nb,person entity
+general_term,date,DATE,Nd,date or time expression
+general_term,document,,Na,document-like general term
+general_term,place,LOC,Nc,place expression
+organization,administrative_body,ORG,Na,administrative body
+organization,association,ORG,Na,association or society
+organization,committee,ORG,Na,committee
+organization,conference,ORG,Na,institutional meeting body
+organization,country,GPE,Nc,country or state entity
+organization,government,ORG,Na,government or cabinet
+organization,parliament_assembly,ORG,Na,parliament or assembly
+organization,party,ORG,Na,political party
+organization,representative_member,,Na,member role expression
+organization,research_organization,ORG,Na,research body
+position,chair,,Na,chair role
+position,minister,,Na,ministerial role
+position,official,,Na,official role
+position,president,,Na,president role
+position,representative_member,,Na,representative or member role

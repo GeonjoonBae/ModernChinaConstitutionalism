@@ -1,0 +1,84 @@
+{
+  "filter_name": "filter_context_pre_zhixian",
+  "filter_basis": "context",
+  "filter_reason": "pre_zhixian",
+  "filename_suffix": "filtered_pre_zhixian_context",
+  "action": "exclude_context_uid",
+  "source_csv": "shenbao\\shenbao_filters\\context\\filter_context_pre_zhixian.before_20260817.csv",
+  "filter_csv": "shenbao\\shenbao_filters\\context\\filter_context_pre_zhixian.csv",
+  "created_at": "2026-06-11T18:31:54",
+  "row_count": 1371,
+  "excluded_context_uid_count": 1371,
+  "exclude_reason_counts": {
+    "manual_exclude": 2,
+    "rule_pre1913_no_core_companion": 1369
+  },
+  "required_column": "context_uid",
+  "columns": [
+    "context_uid",
+    "article_id",
+    "date",
+    "context_char_len",
+    "keyword_occurrence_count",
+    "context_text",
+    "class_label",
+    "predicted_class_id",
+    "predicted_period_label",
+    "prob_positive",
+    "prob_negative",
+    "decision_score",
+    "actual_period_label",
+    "exclude_reason"
+  ],
+  "updated_at": "2026-08-17T22:33:59",
+  "revision_20260817": {
+    "rule": "Exclude contexts through 1912 containing a token that contains 制憲, except contexts with exact-token 立憲 or 憲政; retain post-1912 manual official-title exclusions 26955 and 32404.",
+    "added_context_uids": [
+      1646,
+      1647,
+      3156,
+      6465,
+      6518,
+      6519,
+      7725,
+      8081,
+      8598,
+      8599,
+      8611,
+      8647,
+      8648,
+      9498,
+      10144,
+      10475,
+      10512,
+      10603,
+      10612,
+      11440,
+      11901
+    ],
+    "derived_pre1913_exclusion_count": 1369,
+    "retained_pre1913_context_uids": [
+      9499,
+      10143,
+      10904
+    ],
+    "retained_post1912_exclusions": [
+      26955,
+      32404
+    ],
+    "retained_context_token_mask": {
+      "filter_csv": "shenbao\\shenbao_filters\\token\\filter_token_pre_zhixian_retained_official_title.csv",
+      "context_uids": [
+        9499,
+        10143,
+        10904
+      ],
+      "token_match": "制憲",
+      "match_mode": "contains",
+      "action": "exclude_matching_token_rows_only"
+    }
+  },
+  "source_context_jsonl": "shenbao\\shenbao_nlp\\shenbao_nlp_ckip_bert-base-chinese_context_constitutional.jsonl",
+  "source_tokens_parquet": "shenbao\\shenbao_network\\applied_tokens\\regex_only\\tokens.parquet",
+  "generator_script": "shenbao_pre_zhixian_filter_revision.py"
+}

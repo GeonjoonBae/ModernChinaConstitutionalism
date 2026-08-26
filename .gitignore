@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Source text and token-level corpora are intentionally not distributed.
+raw/
+private/
+*.jsonl
+*.parquet
