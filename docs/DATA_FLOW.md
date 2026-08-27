@@ -35,6 +35,8 @@ CKIP `bert-base-chinese`로 단어 분절, 품사 태깅, 개체명 인식을 �
 
 각 핵심어의 상위 주변어 집합과 정규화된 edge 가중치를 이용해 Jaccard와 weighted Jaccard를 계산했다. 전체 시기는 window 1, 5, 10, 20, 시기별 비교는 window 10을 사용했다.
 
+`multi_core_ego_network_dashboard.html`은 같은 집계 네트워크에서 핵심어별 상위 100개 주변어와 dominant POS를 결합하여 탐색형 자아망으로 표현한다. 공개판은 노드·에지·POS 집계만 포함하며, 로컬 분석판에서 제공한 에지별 원문 문맥은 제외한다.
+
 ## 8. Pair-conditioned keyness
 
 두 핵심어 모두의 상위 100개 주변어에 포함되는 공유 주변어를 후보로 삼고, 두 핵심어와의 연결 횟수 중 작은 값인 `min`을 pair count로 사용했다. 같은 시기의 나머지 핵심어 쌍과 대비하여 다섯 keyness 지표를 계산한 후, 네 지표 이상에서 상위 30위 안에 드는 후보를 선별했다.

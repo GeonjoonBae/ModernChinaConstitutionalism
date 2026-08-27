@@ -56,7 +56,7 @@ def read_rows(path: Path) -> list[dict[str, object]]:
             "edge_b",
             "shared_strength",
         }
-        keep = {
+        keep = [
             "period_id",
             "period_label",
             "period_sort_order",
@@ -66,7 +66,7 @@ def read_rows(path: Path) -> list[dict[str, object]]:
             "focus_a_label",
             "focus_b_label",
             *DISPLAY_FIELDS,
-        }
+        ]
         for source in reader:
             row: dict[str, object] = {}
             for field in keep:

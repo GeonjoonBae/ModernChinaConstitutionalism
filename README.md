@@ -79,6 +79,7 @@ ModernChinaConstitutionalism/
 | 표 1: period별 기사·문맥·핵심어 수 | `data/periodization/long_period_manual_counts.csv` |
 | 그림 1: 30일 이동평균과 시기 구분 | `data/periodization/rolling30_values.csv`, `figures/figure1_rolling30_with_periods.png` |
 | 그림 2: 전체 시기 핵심어 자아망 | `figures/figure2_multi_core_ego_network.png` |
+| 그림 2의 탐색형 네트워크 | `dashboards/multi_core_ego_network_dashboard.html`, `data/network/multi_core/multi_core_ego_neighbors.csv` |
 | 표 2: 핵심어 쌍 공유 주변어 | `data/network/tables/global_pair_shared_tokens.csv` |
 | 표 3-5: Jaccard·가중 Jaccard | `data/network/metrics/network_core_overlap_metrics.csv` |
 | 표 6: 핵심어 쌍 Keyness Top20 | `data/keyness/paper_top20.csv` |
@@ -101,10 +102,25 @@ robust score: 4 이상
 
 ## 대시보드
 
-- [Network Overlap Metrics Dashboard](dashboards/network_overlap_metrics_dashboard.html)
-- [Pair-Conditioned Keyness Dashboard - Paper Lite](dashboards/pair_conditioned_keyness_dashboard_lite.html)
+### Multi-core Ego Network Dashboard
 
-두 파일은 외부 서버 없이 브라우저에서 직접 열 수 있는 독립형 HTML이다. 경량 keyness 대시보드는 논문에서 사용한 여섯 개 period-pair 조건과 robust score 4 이상 후보만 포함한다.
+네 핵심어와 주변어의 연결 구조를 profile, window, period, center mode 및 POS 조건에 따라 탐색할 수 있다. 공개판에서는 저작권이 있는 원문 문맥을 제공하지 않고 집계 네트워크만 표시한다.
+
+[![Multi-core Ego Network Dashboard](dashboards/screenshot_multi_core_ego_network_dashboard.jpg)](dashboards/multi_core_ego_network_dashboard.html)
+
+### Network Overlap Metrics Dashboard
+
+핵심어 쌍의 시기별 네트워크 유사도를 Jaccard, weighted Jaccard 등의 지표로 비교할 수 있다.
+
+[![Network Overlap Metrics Dashboard](dashboards/screenshot_network_overlap_metrics_dashboard.jpg)](dashboards/network_overlap_metrics_dashboard.html)
+
+### Pair-Conditioned Keyness Dashboard - Paper Lite
+
+논문에서 분석한 여섯 개 시기-핵심어 쌍의 robust 공유 주변어와 keyness 지표를 확인할 수 있다.
+
+[![Pair-Conditioned Keyness Dashboard](dashboards/screenshot_pair_conditioned_keyness_dashboard_lite.jpg)](dashboards/pair_conditioned_keyness_dashboard_lite.html)
+
+세 파일은 외부 서버 없이 브라우저에서 직접 열 수 있는 독립형 HTML이다. 경량 keyness 대시보드는 논문에서 사용한 여섯 개 period-pair 조건과 robust score 4 이상 후보만 포함한다.
 
 ## 재현 방법
 

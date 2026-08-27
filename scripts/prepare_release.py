@@ -57,6 +57,8 @@ UPSTREAM_SCRIPTS = [
     "shenbao_pelt_change_points.py",
     "shenbao_focus_cta_dashboard_build.py",
     "shenbao_html_controls.py",
+    "shenbao_region_analysis_utils.py",
+    "shenbao_region_network_html_graph.py",
     "shenbao_capture_focus_ego_for_paper.py",
     "shenbao_network_overlap_metrics.py",
     "shenbao_network_overlap_metrics_batch.py",
@@ -221,6 +223,56 @@ def copy_network_outputs(source_root: Path, repo_root: Path) -> None:
     )
 
 
+def build_multi_core_public(source_root: Path, code_root: Path, repo_root: Path) -> None:
+    interpretation = source_root / "shenbao_interpretation" / "focus_anchor_dashboard_ver2"
+    input_csv = interpretation / "network_summary" / "region_network_top_neighbors.csv"
+    output_html = repo_root / "dashboards" / "multi_core_ego_network_dashboard.html"
+    prepared_csv = repo_root / "data" / "network" / "multi_core" / "multi_core_ego_neighbors.csv"
+    summary_json = repo_root / "data" / "network" / "multi_core" / "multi_core_ego_dashboard_summary.json"
+    output_html.parent.mkdir(parents=True, exist_ok=True)
+    prepared_csv.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [
+            sys.executable,
+            str(code_root / "shenbao_region_network_html_graph.py"),
+            "--input-csv",
+            str(input_csv),
+            "--output-html",
+            str(output_html),
+            "--region-mode",
+            "custom",
+            "--region-norms",
+            "憲政,立憲,憲法,制憲",
+            "--profiles",
+            "regex-only,strict,full",
+            "--period-set-ids",
+            "global,long_period_manual",
+            "--windows",
+            "1,5,10,20",
+            "--max-neighbors-per-region",
+            "100",
+            "--default-topn-neighbors",
+            "20",
+            "--tokens-root",
+            str(source_root / "shenbao_network" / "applied_tokens"),
+            "--title",
+            "Multi-core ego networks",
+            "--ui-mode",
+            "core",
+            "--hide-data-scope",
+            "true",
+            "--public-release",
+            "true",
+            "--prepared-output-csv",
+            str(prepared_csv),
+            "--summary-json",
+            str(summary_json),
+        ],
+        check=True,
+        cwd=code_root,
+    )
+
+
 def number(row: dict[str, str], field: str) -> float:
     try:
         return float(row.get(field, ""))
@@ -331,6 +383,7 @@ def main() -> None:
     copy_periodization(source_root, repo_root)
     copy_edges(source_root, repo_root)
     copy_network_outputs(source_root, repo_root)
+    build_multi_core_public(source_root, code_root, repo_root)
     build_keyness_outputs(source_root, repo_root)
     write_context_index(repo_root)
     copy_scripts(code_root, repo_root)

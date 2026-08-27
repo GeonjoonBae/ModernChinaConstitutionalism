@@ -25,6 +25,19 @@
 
 파일명은 token profile, window, period, 최소 joint count와 stopword rule 버전을 기록한다.
 
+### `multi_core_ego_neighbors.csv`
+
+- `region_norm`, `alter_token`: 핵심어와 주변어
+- `token_profile`, `network_window`, `center_mode`: 토큰·윈도우·중심어 조건
+- `period_set_id`, `period_id`: 전체 시기 또는 long period 식별자
+- `edge_weight`: 핵심어와 주변어의 연결량
+- `neighbor_rank`, `neighbor_share_within_region`: 핵심어 내부 주변어 순위와 연결 비중
+- `dominant_pos`, `dominant_pos_share`: 주변어의 최다 품사와 그 비중
+- `pos_group`, `pos_group_label`: 대시보드 표시용 품사군
+- `region_dominant_pos` 계열: 핵심어 노드의 dominant POS 정보
+
+이 파일은 집계 네트워크의 공개용 대시보드 입력이며 기사 원문, 문맥 문자열, 기사·문맥 식별자를 포함하지 않는다.
+
 ## Network overlap metrics
 
 - `focus_a_label`, `focus_b_label`: 비교 핵심어

@@ -8,6 +8,7 @@
 - 공기어 네트워크의 집계 edge
 - 네트워크 유사도와 pair-conditioned keyness 결과
 - 논문에 사용한 그림과 독립형 HTML 대시보드
+- 원문 문맥을 제외한 공개용 Multi-core ego network 집계 데이터와 대시보드
 - 분석 코드와 재현 문서
 
 ## 공개하지 않는 자료

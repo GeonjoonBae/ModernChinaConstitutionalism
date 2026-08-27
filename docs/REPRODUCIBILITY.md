@@ -43,6 +43,35 @@ python scripts/build_keyness_dashboard_lite.py
 
 출력은 `dashboards/pair_conditioned_keyness_dashboard_lite.html`이다.
 
+## 공개용 Multi-core ego network 대시보드
+
+로컬 원 연구 작업 폴더가 있을 때 `prepare_release.py`는 집계 네트워크에 dominant POS를 결합하여 다음 두 파일을 생성한다.
+
+```text
+data/network/multi_core/multi_core_ego_neighbors.csv
+dashboards/multi_core_ego_network_dashboard.html
+```
+
+생성기는 `--public-release true` 조건으로 실행되며, 에지별 원문 문맥과 로컬 절대경로를 HTML payload에 포함하지 않는다. 공개 CSV만으로 HTML을 다시 만들 때에는 POS 정보가 이미 들어 있으므로 다음과 같이 실행할 수 있다.
+
+```powershell
+python scripts/upstream/shenbao_region_network_html_graph.py `
+  --input-csv data/network/multi_core/multi_core_ego_neighbors.csv `
+  --output-html reproduced/multi_core_ego_network_dashboard.html `
+  --region-mode custom `
+  --region-norms "憲政,立憲,憲法,制憲" `
+  --profiles "regex-only,strict,full" `
+  --period-set-ids "global,long_period_manual" `
+  --windows "1,5,10,20" `
+  --max-neighbors-per-region 100 `
+  --default-topn-neighbors 20 `
+  --attach-pos false `
+  --title "Multi-core ego networks" `
+  --ui-mode core `
+  --hide-data-scope true `
+  --public-release true
+```
+
 ## Network overlap 재계산
 
 개별 edge CSV에는 다음 스크립트를 적용할 수 있다.

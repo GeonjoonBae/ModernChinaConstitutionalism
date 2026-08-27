@@ -1,0 +1,12 @@
+{
+  "input_csv": "region_network_top_neighbors.csv",
+  "output_html": "multi_core_ego_network_dashboard.html",
+  "rows": 43137,
+  "regions": [
+    "憲政",
+    "立憲",
+    "憲法",
+    "制憲"
+  ],
+  "generated_at": "2026-08-27T23:54:12"
+}
